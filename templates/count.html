@@ -1,0 +1,20 @@
+{% if count > 1 %}
+  <h2>There are {{ count }} words in your text!</h2>
+{% else %}
+  <h2>There is {{ count }} word in your text!</h2>
+{% endif %}
+
+<a href="/">Try again!</a>
+
+<h3>Full Text:</h3>
+<p>{{ text }}</p>
+
+<h3>Top 3 Words:</h3>
+{% for word, counter in top %}
+  <p>{{ word }}: {{ counter }}</p>
+{% endfor %}
+
+<h3>Full Words Count:</h3>
+{% for word, counter in dictionary %}
+  <p>{{ word }}: {{ counter }}</p>
+{% endfor %}
